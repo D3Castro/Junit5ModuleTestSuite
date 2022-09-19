@@ -31,7 +31,14 @@ lazy val commonSettings = Seq(
   libraryDependencies ++= testDependencies
 )
 
-lazy val root = (project in file("junit"))
+lazy val root = (project in file("."))
+  .settings(
+    commonSettings
+  )
+  .dependsOn(junit)
+  .aggregate(junit)
+
+lazy val junit = (project in file("junit"))
   .settings(
     commonSettings
   )

@@ -7,6 +7,6 @@ import org.junit.platform.suite.api.Suite;
 @Suite
 @SelectPackages("com.test.junit")
 @IncludeClassNamePatterns({".*Test"})
-public class UnitTestSuite {
+public class TestSuite {
 
 }
